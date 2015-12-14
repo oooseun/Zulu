@@ -1,8 +1,9 @@
-# Zulu
-DIY Home Automation App with tons of features.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/13513002/11792466/40ef0f04-a274-11e5-9d36-81e7cb78be08.png)
+#  
 
+
+DIY Home Automation App with tons of features.
 
 Take a look at [this](http://zulu.oooseun.com/) for more info. 
 
