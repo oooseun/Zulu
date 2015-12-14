@@ -43,3 +43,7 @@ tempArray = [100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,1
 ```
 
 But other than making sure the links are correct, the app is good to go!
+
+
+
+If you found this App helpful in anyway (or not) feel free to [donate!](https://www.paypal.me/ope)
