@@ -42,7 +42,7 @@ class MyTableViewController: UITableViewController,UITextFieldDelegate{
         if let temp = self.defaults.stringForKey("locklink") {self.textFieldLink7.text = temp} else {self.textFieldLink7.text = vc.locklink}
         if let temp = self.defaults.stringForKey("webcamlink") {self.textFieldLink8.text = temp} else {self.textFieldLink8.text = vc.webcamlink}
         if let temp = self.defaults.stringForKey("shutdownlink") {self.textFieldLink9.text = temp} else {self.textFieldLink9.text = vc.shutdownlink}
-        if let temp = self.defaults.stringForKey("vitalslink") {self.textFieldLink10.text = temp} else {self.textFieldLink10.text = vc.vitalsLink}
+        if let temp = self.defaults.stringForKey("vitalslink") {self.textFieldLink10.text = temp} else {self.textFieldLink10.text = vc.vitalslink}
         if let temp = self.defaults.stringForKey("homelink") {self.textFieldLink11.text = temp} else {self.textFieldLink11.text = vc.homelink}
         if let temp = self.defaults.stringForKey("nothomelink") {self.textFieldLink12.text = temp} else {self.textFieldLink12.text = vc.nothomelink}
         if let temp = self.defaults.stringForKey("weatherlink") {self.textFieldLink13.text = temp} else {self.textFieldLink13.text = vc.weatherlink}
@@ -154,9 +154,9 @@ class MyTableViewController: UITableViewController,UITextFieldDelegate{
     }
     @IBAction func textFieldLink10Edited(sender: AnyObject) {
         if (self.textFieldLink10.text == ""){
-            vc.defaults.setValue(vc.vitalsLink, forKeyPath: "vitalsLink")
+            vc.defaults.setValue(vc.vitalslink, forKeyPath: "vitalslink")
         } else {
-            vc.defaults.setValue(self.textFieldLink10.text, forKeyPath: "vitalsLink")
+            vc.defaults.setValue(self.textFieldLink10.text, forKeyPath: "vitalslink")
         }
     }
     @IBAction func textFieldLink11Edited(sender: AnyObject) {

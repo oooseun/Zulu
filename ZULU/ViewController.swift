@@ -56,7 +56,7 @@ class ViewController:   UIViewController,CLLocationManagerDelegate {
     var switch2link:String = "http://192.168.1.100:23456/state2"
     var switch3link:String = "http://192.168.1.100:23456/state3"
     var switch4link:String = "http://192.168.1.100:23456/state4"
-    var vitalsLink:String  = "http://192.168.1.100:23456/vitals"
+    var vitalslink:String  = "http://192.168.1.100:23456/vitals"
 
     var motionlightlink:String =  "http://192.168.1.100:23456/motionlight"
     var motionlight1:Int = 3;
@@ -353,7 +353,7 @@ class ViewController:   UIViewController,CLLocationManagerDelegate {
     //func updateVitals() -> Bool{
     func updateVitals(){
 
-        let url = NSURL(string:self.vitalsLink)// self.vitalsLink)
+        let url = NSURL(string:self.vitalslink)// self.vitalslink)
 
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!)  {(data, response, error) in
 
@@ -886,7 +886,7 @@ class ViewController:   UIViewController,CLLocationManagerDelegate {
         //setChart(self.tempArray, values: self.tempData)
 
 
-if vitalsLink != "http://192.168.1.100:23456/vitals" {
+if vitalslink != "http://192.168.1.100:23456/vitals" {
         _ = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("updateVitals"), userInfo: nil, repeats: true)
         _ = NSTimer.scheduledTimerWithTimeInterval(60.0*15.0, target: self, selector: Selector("updateTempArray"), userInfo: nil, repeats: true)
 }
@@ -921,7 +921,7 @@ if vitalsLink != "http://192.168.1.100:23456/vitals" {
         if let temp = self.defaults.stringForKey("locklink") {self.locklink = temp}
         if let temp = self.defaults.stringForKey("webcamlink") {self.webcamlink = temp}
         if let temp = self.defaults.stringForKey("shutdownlink") {self.shutdownlink = temp}
-        if let temp = self.defaults.stringForKey("vitalslink") {self.vitalsLink = temp}
+        if let temp = self.defaults.stringForKey("vitalslink") {self.vitalslink = temp}
         if let temp = self.defaults.stringForKey("homelink") {self.homelink = temp}
         if let temp = self.defaults.stringForKey("nothomelink") {self.nothomelink = temp}
         if let temp = self.defaults.stringForKey("weatherlink") {self.weatherlink = temp}
