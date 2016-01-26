@@ -51,7 +51,7 @@ Make sure you change the viewing 'ratio' to this
 ![](https://cloud.githubusercontent.com/assets/13513002/11792467/40f0274a-a274-11e5-9734-136d016111cd.png)
 
 
-But other than making sure the links are correct, the app is good to go!
+But other than making sure the links are correct, the app is good to go! (Night mode At night doesn't work though)
 
 
 I used [Sleep on LAN](http://www.ireksoftware.com/SleepOnLan/) for my 'sleep/lock' button's. I also used [DarkSky](https://itunes.apple.com/us/app/dark-sky-hyperlocal-weather/id517329357?mt=8) and a webcam app called [LiveCam Pro](https://itunes.apple.com/us/app/live-cams-pro/id428145132?mt=8)
