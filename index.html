@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Zulu : Home Automation App">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Zulu</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/oooseun/Zulu">View on GitHub</a>
+
+          <h1 id="project_title">Zulu</h1>
+          <h2 id="project_tagline">Home Automation App</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/oooseun/Zulu/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/oooseun/Zulu/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><img src="https://cloud.githubusercontent.com/assets/13513002/11792466/40ef0f04-a274-11e5-9d36-81e7cb78be08.png" alt="alt tag"></p>
+
+<p>DIY Home Automation App with tons of features.</p>
+
+<p>Take a look at <a href="http://zulu.oooseun.com/">this</a> for more info. </p>
+
+<p>The App is ready to go,just insert links and Go! The format of the "Vitals link" has to be 'specially structured', this is shown below.</p>
+
+<p>My (personal) backend setup can be seen <a href="https://github.com/oooseun/ZuluBackend">here</a>. I HIGHLY recommend you take a good look at it. </p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> vitals <span class="pl-k">=</span> {                                        
+    <span class="pl-s"><span class="pl-pds">'</span>temp<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>light<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>outsideTemp<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>icon<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>ishome<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>ismotion<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">false</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>isnoise<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">false</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>state1<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>off<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>state2<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>off<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>state3<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>off<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>state4<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>off<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>visits<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>webcamstatus<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>undefined<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>tempRaw<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>uptime<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-en">moment</span>().<span class="pl-en">from</span>(startTime),
+    <span class="pl-s"><span class="pl-pds">'</span>motionLights<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>motionlight1<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>motionlight2<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>motionlight3<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>motionlight4<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>tempArray<span class="pl-pds">'</span></span><span class="pl-k">:</span>[<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>]
+};
+</pre></div>
+
+<p>And tempArray :</p>
+
+<div class="highlight highlight-source-js"><pre>
+tempArray <span class="pl-k">=</span> [<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">100.0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>]
+</pre></div>
+
+<h1>
+<a id="if-you-have-trouble-viewing-the-storyboard" class="anchor" href="#if-you-have-trouble-viewing-the-storyboard" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>If you have trouble viewing the storyboard</h1>
+
+<p>Make sure you change the viewing 'ratio' to this </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/13513002/11792467/40f0274a-a274-11e5-9734-136d016111cd.png" alt=""></p>
+
+<p>But other than making sure the links are correct, the app is good to go! (Night mode At night doesn't work though)</p>
+
+<p>I used <a href="http://www.ireksoftware.com/SleepOnLan/">Sleep on LAN</a> for my 'sleep/lock' button's. I also used <a href="https://itunes.apple.com/us/app/dark-sky-hyperlocal-weather/id517329357?mt=8">DarkSky</a> and a webcam app called <a href="https://itunes.apple.com/us/app/live-cams-pro/id428145132?mt=8">LiveCam Pro</a></p>
+
+<p>If you found this App helpful in anyway (or not) feel free to <a href="https://www.paypal.me/ope">donate!</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Zulu maintained by <a href="https://github.com/oooseun">oooseun</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
